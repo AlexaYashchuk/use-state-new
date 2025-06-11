@@ -15,8 +15,7 @@ const Comp3 = () => {
   ]);
 
   const count = (id) => {
-    const newArr = [...cart];
-    const res = newArr.map((item) => {
+    const res = cart.map((item) => {
       if (item.id == id) {
         return { ...item, count: item.count + 1 };
       }

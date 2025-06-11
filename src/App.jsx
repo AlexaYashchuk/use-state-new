@@ -1,14 +1,24 @@
 import "./App.css";
-import { Comp1 } from "./componets/comp1";
-import { Comp2 } from "./componets/comp2";
-import { Comp3 } from "./componets/comp3";
+
+import { Link } from "react-router-dom";
+import { AppRoutes } from "./Routes";
 
 function App() {
   return (
     <>
-      <Comp1 />
-      <Comp2 />
-      <Comp3 />
+      <ul className="link-table">
+        <li>
+          <Link to="/comp1">Пример 1</Link>
+        </li>
+
+        <li>
+          <Link to="/comp2">Пример 2</Link>
+        </li>
+        <li>
+          <Link to="/comp3">Пример 3</Link>
+        </li>
+      </ul>
+      <AppRoutes />
     </>
   );
 }

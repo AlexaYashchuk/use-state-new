@@ -25,3 +25,28 @@ Button {
   margin-bottom: 10px;
   cursor: pointer;
 }
+
+.link-table {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.link-table li {
+  margin: 0 20px;
+}
+
+.link-table a {
+  text-decoration: none; /* Убираем подчеркивание */
+  color: #000000; /* Цвет текста */
+  font-size: 18px; /* Размер шрифта */
+  padding: 10px 20px; /* Отступы вокруг текста */
+  border: 2px solid transparent; /* Прозрачная рамка */
+  border-radius: 5px; /* Закругленные углы */
+  transition: all 0.3s ease; /* Плавный переход для эффектов */
+}
+
+.link-table a:hover {
+  border-color: #5a5b5c; /* Цвет рамки при наведении */
+  background-color: #d7e0e9;
+}

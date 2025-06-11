@@ -1,13 +1,18 @@
 import { Button } from "antd";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const Comp1 = () => {
+  const myFocus = useRef(null);
   const [newName, setNewName] = useState("");
   const [user, setUser] = useState({
     name: "Alexandra",
     age: 15,
     isActive: true,
   });
+
+  const focus1 = () => {
+    myFocus.current.focus();
+  };
 
   const changeActive = () => {
     setUser((user) => ({
@@ -40,6 +45,10 @@ const Comp1 = () => {
       <h1>Профиль пользователя</h1>
       <p>Имя: {user.name}</p>
       <input
+        onMouseEnter={() => {
+          focus1();
+        }}
+        ref={myFocus}
         type="text"
         placeholder="Новое имя"
         value={newName}

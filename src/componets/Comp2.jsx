@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { Button } from "antd";
-const Comp2 = () => {
+const Comp2 = ({ task }) => {
   const [taskList, setTaskList] = useState(["qwerty", "asdfg", "zxcvb"]);
 
   const addTask = (task) => {
@@ -23,7 +23,7 @@ const Comp2 = () => {
           <li key={uuidv4()}>{item}</li>
         ))}
       </ul>
-      <Button onClick={() => addTask("task")}>Добавить задачу</Button>
+      <Button onClick={() => addTask(task)}>Добавить задачу</Button>
       <Button onClick={deleteLastTask}>Удалить последнюю задачу</Button>
     </div>
   );
